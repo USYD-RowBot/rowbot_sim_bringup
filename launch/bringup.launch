@@ -4,5 +4,7 @@
 
 	<include file="$(find rowbot_gazebo)/launch/simulator.launch"/>
  <include file="$(find rowbot_navigation)/launch/navigation.launch"/>
+<include file="$(find rowbot_navigation)/launch/move_base.launch"/>
  <include file="$(find rowbot_rviz)/launch/viz.launch"/>
+  <node pkg="rowbot_navigation" type="motor_controller.py" name = "motor_controller_nav" />
 </launch>
